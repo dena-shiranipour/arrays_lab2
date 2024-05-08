@@ -24,6 +24,11 @@ public class Runner {
         scottishIslands.add(2, "Islay");
 //        4. Print out the index position of "Skye"
         System.out.println(scottishIslands.indexOf("Skye"));
+
+        // the spread out way is:
+        //int skyIndex = scottishIslands.indexOf("Skye");
+        //System.out.println("Skye index" + skyIndex);
+
 //        5. Remove "Tresco" from the list by name
         scottishIslands.remove("Tresco");
 //        6. Remove "Arran" from the list by index
@@ -52,6 +57,18 @@ public class Runner {
             }
             ;
         }
+
+//         List<Integer> evenNumbers = new ArrayList<>();
+//        for (int number : numbers) {
+//            if(number % 2 == 0){
+//                evenNumbers.add(number);
+//            }
+//        }
+//        System.out.println("even numbers: " + evenNumbers);
+
+
+
+
 //        2. Print the difference between the largest and smallest value
 
         int max = numbers.get(9);
@@ -60,19 +77,14 @@ public class Runner {
         int difference = max - min;
         System.out.println(difference);
 
-//            int[] value = {1, 1, 4, 2, 7, 1, 6, 15, 13, 99, 7};
-//
-//        int min = Integer.MAX_VALUE, max = Integer.MIN_VALUE;
-//
-//        System.out.println(min);
-//
-//        for (final int val: value) {
-//            if (val < min)
-//                min = val;
-//            if (val > max)
-//                max = val;
-//        }
-//        System.out.println(max-min);
+
+//        // find the largest number
+//        int maxNumber = Collections.max(numbers);
+//        //find smallest
+//        int minNumber = Collections.min(numbers);
+//        //subtract
+//        System.out.println("difference between min and max" + (maxNumber - minNumber));
+
 
 
 //        3. Print True if the list contains a 1 next to a 1 somewhere.
@@ -87,6 +99,18 @@ public class Runner {
             }
         }
 
+
+        //loop through list using classic loop
+        //if the next element is 1 and the current element is 1, print true
+        //else print false
+
+//        for(int i = 0; i < numbers.size(); i++) {
+//            //guard clause (early return under certain conditions)
+//            //if(i == numbers.size()-1) break;
+//            if (numbers.get(i)) == 1 && numbers.get(i+1) == 1) System.out.println("a paid of 1s : true");
+//        }
+
+
 //        4. Print the sum of the numbers,
         int sum = 0;
         for (int i = 0; i < numbers.size(); i++) {
@@ -95,6 +119,12 @@ public class Runner {
         }
         System.out.println(sum);
 
+//        int sumOfNumbers = 0;
+//        for (int number : numbers) {
+//            sumOfNumbers += number;
+//        }
+//        System.out.println("sum of numbers: " +sumOfNumbers);
+
 
 //        5. Print the sum of the numbers...
 //           ...except the number 13 is unlucky, so it does not count...
@@ -102,6 +132,15 @@ public class Runner {
 //
 //          So [2, 7, 13, 2] would have sum of 9.
 
+
+//        int total = 0;
+//        for (int i =0; i<numbers.size(); i++) {
+//            if(numbers.get(i) == 13 || numbers.get(i-1) == 13) continue;
+//            total += numbers.get(i);
+//        }
+//        System.out.println("Sum of numbers:" " + total");
+
+        
         int sum2 = 0;
 
         for (int i = 0; i < numbers.indexOf(13); i++) {
